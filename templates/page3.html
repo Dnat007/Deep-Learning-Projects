@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../static/image1.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            width: 90%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #039486;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        body {
+            padding: auto;
+            text-align: center;
+        }
+
+        body {
+            padding: auto;
+            text-align: center;
+        }
+
+        .top {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .top h1 {
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: white;
+            margin-top: 15px;
+        }
+
+        form .field {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 5px;
+            margin: 4%;
+            padding: 1%;
+        }
+
+        form .field .inputfield {
+            display: flex;
+            width: calc(100% / 3 - 15px);
+            flex-direction: column;
+            margin: 4px 0;
+        }
+
+        .inputfield input {
+            height: 40px;
+            margin: 2px;
+            padding: 0 15px;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .inputfield label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .inputfield h2 {
+            color: white;
+        }
+
+        form button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            max-width: 200px;
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: aqua;
+            color: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="http://127.0.0.1:5000/"><img src="../static/logo1.png" class="logo">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Predict</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="top">
+            <h1> Classification Model</h1>
+        </div>
+        <form method="post">
+            action mode dedo form pe
+            <div class="field">
+
+                <div class="inputfield">
+                    <label for="feature1">
+                        <h2>Smoothness_MEAN:</h2>
+                    </label>
+                    <input type="float" name="smoothness_mean" id="smoothness_mean" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature2">
+                        <h2>Symmentry_value:</h2>
+                    </label>
+                    <input type="float" name="symmetry_mean" id="symmetry_mean" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature3">
+                        <h2>dimension:</h2>
+                    </label>
+                    <input type="float" name="fractal_dimension_mean" id="fractal_dimension_mean" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature4">
+                        <h2>texture(posture):</h2>
+                    </label>
+                    <input type="float" name="texture_se" id="texture_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature5">
+                        <h2>smooth value:</h2>
+                    </label>
+                    <input type="float" name="smoothness_se" id="smoothness_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature6">
+                        <h2>compact value:</h2>
+                    </label>
+                    <input type="float" name="compactness_se" id="compactness_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature7">
+                        <h2>concaveness:</h2>
+                    </label>
+                    <input type="float" name="concavity_se" id="concavity_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature8">
+                        <h2>symmetry points:</h2>
+                    </label>
+                    <input type="float" name="symmetry_se" id="symmetry_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature9">
+                        <h2>dimensionapart 9:</h2>
+                    </label>
+                    <input type="float" name="fractal_dimension_se" id="fractal_dimension_se" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature10">
+                        <h2>shape style 10:</h2>
+                    </label>
+                    <input type="float" name="smoothness_worst" id="smoothness_worst" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature11">
+                        <h2>worst_symmetry:</h2>
+                    </label>
+                    <input type="float" name="symmetry_worst" id="symmetry_worst" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature12">
+                        <h2>worst_dimension:</h2>
+                    </label>
+                    <input type="float" name="fractal_dimension_worst" id="fractal_dimension_worst" required>
+                </div>
+
+                <div class="inputfield">
+                    <label for="feature13">
+                        <h2>concave points:</h2>
+                    </label>
+                    <input type="float" name="concave_points" id="concave_points" required>
+                </div>
+
+                <button class="row1" type="submit" value="predict">
+                    <span class="column">
+                        <h1>Predict</h1>
+                    </span>
+                </button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+</body>
+
+</html>

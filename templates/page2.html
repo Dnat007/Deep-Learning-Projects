@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../static/image1.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar {
+        width: 90%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .navbar ul li::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #039486;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+
+    .navbar ul li:hover::after {
+        width: 100%;
+    }
+
+    .row2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row2 h1 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .row2 p {
+        color: white;
+    }
+
+    .row3 {
+        width: 99%;
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+    }
+
+    .row3 .col3 {
+        width: 33%;
+        margin: 15px;
+        background: white;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .row3 .col3 img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .row3 .col3 h2 {
+        text-transform: capitalize;
+        color: indigo;
+        margin: 10px;
+    }
+
+    .row3 .col3 p {
+        color: black;
+        margin: 0 0 15px 0;
+    }
+
+    .row3 .col3 button {
+        color: black;
+        background-color: aqua;
+        width: 50%;
+        height: 60px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <a href="http://127.0.0.1:5000/"><img src="../static/logo1.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="row2">
+            <h1>Let' s Do Prediction</h1>
+            <p>In this era of Artificial Intelligence, humans are becoming more dependent on technology.We are providing
+                a solution to the medical labs for knowing a person may having Malaria
+                <br>,cancer etc.in its starting stage or not.Also we are providing the solution to the nursery so that
+                they can take the pics of their plants and they easily know that their plants
+                <br>having cotton disease or not.
+            </p>
+        </div>
+        <div class="row3">
+            <div class="col3">
+                <img src="../static/Cancer.jpg">
+                <form action="/page3" method="get">
+                    <button>
+                        <h1> BREAST CANCER</h1>
+                    </button>
+                </form>
+                <p>A term for diseases in which
+                    <br>abnormal cells divide without
+                    <br>control and can invade nearby tissues.
+                </p>
+            </div>
+            <div class="col3">
+                <form action="/brain_cancer" ,method="get">
+                    <img src="../static/BRAIN.png">
+                    <button>
+                        <h1>BRAIN TUMOR</h1>
+                    </button>
+                </form>
+                <p>A cancerous or non-cancerous mass or growth
+                    <br>of abnormal cells in the brain.
+                </p>
+            </div>
+
+            <div class="col3">
+                <img src="../static/heart Disease.jpg">
+
+                <button>
+                    <h1>HEART DISEASE</h1>
+                </button>
+                <p>A type of disease that affects
+                    <br>the heart or blood vessels.
+                </p>
+            </div>
+            <div class="col3">
+
+                <img src="../static/malaria.jpg">
+                <button>
+                    <h1>MALARIA DETECTION</h1>
+                </button>
+                <p>When a mosquito becomes infected with the disease after biting an infected person
+                    <br>and the infected mosquito then bites a noninfected person
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+
+</html>
